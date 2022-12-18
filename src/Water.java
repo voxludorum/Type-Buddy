@@ -21,12 +21,12 @@ public class Water implements Element {
     }
 
     public List<Element> getStrongDef() {
-        // These types are weak against Water Pokemon
+        // These types are weak against Water Pokémon
         return Arrays.asList(new Fire(), new Water(), new Ice(), new Steel());
     }
 
     public List<Element> getWeakDef() {
-        // These types are strong against Water Pokemon
+        // These types are strong against Water Pokémon
         return Arrays.asList(new Electric(), new Grass());
     }
 }

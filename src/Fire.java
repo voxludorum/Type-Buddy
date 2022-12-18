@@ -29,12 +29,12 @@ public class Fire implements Element { //Inherits from Element class
     }
 
     public List<Element> getStrongDef() {
-        // These types are weak against Fire Pokemon
+        // These types are weak against Fire Pokémon
         return Arrays.asList(new Fire(), new Grass(), new Ice(), new Bug(), new Steel(), new Fairy());
     }
 
     public List<Element> getWeakDef() {
-        // These types are strong against Fire Pokemon
+        // These types are strong against Fire Pokémon
         return Arrays.asList(new Water(), new Ground(), new Rock());
     }
 }

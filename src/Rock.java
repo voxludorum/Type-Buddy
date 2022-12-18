@@ -10,23 +10,23 @@ public class Rock implements Element {
 
     @Override
     public List<Element> getStrongAtk() {
-        // Fire is strong against these types
-        return Arrays.asList(new Grass(), new Ice(), new Bug(), new Steel());
+        // Rock is strong against these types
+        return Arrays.asList(new Fire(), new Ice(), new Flying(), new Bug());
     }
 
     @Override
     public List<Element> getWeakAtk() {
-        // Fire is weak against these types
-        return Arrays.asList(new Fire(), new Water(), new Rock(), new Dragon());
+        // Rock is weak against these types
+        return Arrays.asList(new Fighting(), new Ground(), new Steel());
     }
 
     public List<Element> getStrongDef() {
-        // These types are weak against Fire Pokemon
-        return Arrays.asList(new Fire(), new Grass(), new Ice(), new Bug(), new Steel(), new Fairy());
+        // These types are weak against Rock Pokemon
+        return Arrays.asList(new Normal(), new Fire(), new Poison(), new Flying());
     }
 
     public List<Element> getWeakDef() {
-        // These types are strong against Fire Pokemon
-        return Arrays.asList(new Water(), new Ground(), new Rock());
+        // These types are strong against Rock Pokemon
+        return Arrays.asList(new Water(), new Grass(), new Fighting(), new Ground(), new Steel());
     }
 }

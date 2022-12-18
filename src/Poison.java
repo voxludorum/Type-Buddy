@@ -10,23 +10,23 @@ public class Poison implements Element {
 
     @Override
     public List<Element> getStrongAtk() {
-        // Fire is strong against these types
-        return Arrays.asList(new Grass(), new Ice(), new Bug(), new Steel());
+        // Poison is strong against these types
+        return Arrays.asList(new Grass(), new Fairy());
     }
 
     @Override
     public List<Element> getWeakAtk() {
-        // Fire is weak against these types
-        return Arrays.asList(new Fire(), new Water(), new Rock(), new Dragon());
+        // Poison is weak against these types
+        return Arrays.asList(new Poison(), new Ground(), new Rock(), new Ghost());
     }
 
     public List<Element> getStrongDef() {
-        // These types are weak against Fire Pokemon
-        return Arrays.asList(new Fire(), new Grass(), new Ice(), new Bug(), new Steel(), new Fairy());
+        // These types are weak against Poison Pokémon
+        return Arrays.asList(new Grass(), new Fighting(), new Poison(), new Bug(), new Fairy());
     }
 
     public List<Element> getWeakDef() {
-        // These types are strong against Fire Pokemon
-        return Arrays.asList(new Water(), new Ground(), new Rock());
+        // These types are strong against Poison Pokémon
+        return Arrays.asList(new Ground(), new Psychic());
     }
 }

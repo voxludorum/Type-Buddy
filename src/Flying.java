@@ -10,23 +10,23 @@ public class Flying implements Element {
 
     @Override
     public List<Element> getStrongAtk() {
-        // Fire is strong against these types
-        return Arrays.asList(new Grass(), new Ice(), new Bug(), new Steel());
+        // Flying is strong against these types
+        return Arrays.asList(new Grass(), new Fighting(), new Bug());
     }
 
     @Override
     public List<Element> getWeakAtk() {
-        // Fire is weak against these types
-        return Arrays.asList(new Fire(), new Water(), new Rock(), new Dragon());
+        // Flying is weak against these types
+        return Arrays.asList(new Electric(), new Rock(), new Steel());
     }
 
     public List<Element> getStrongDef() {
-        // These types are weak against Fire Pokemon
-        return Arrays.asList(new Fire(), new Grass(), new Ice(), new Bug(), new Steel(), new Fairy());
+        // These types are weak against Flying Pokemon
+        return Arrays.asList(new Grass(), new Fighting(), new Bug());
     }
 
     public List<Element> getWeakDef() {
-        // These types are strong against Fire Pokemon
-        return Arrays.asList(new Water(), new Ground(), new Rock());
+        // These types are strong against Flying Pokemon
+        return Arrays.asList(new Electric(), new Ice(), new Rock());
     }
 }

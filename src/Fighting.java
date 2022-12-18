@@ -10,23 +10,23 @@ public class Fighting implements Element {
 
     @Override
     public List<Element> getStrongAtk() {
-        // Fire is strong against these types
-        return Arrays.asList(new Grass(), new Ice(), new Bug(), new Steel());
+        // Fighting is strong against these types
+        return Arrays.asList(new Normal(), new Ice(), new Rock(), new Dark(), new Steel());
     }
 
     @Override
     public List<Element> getWeakAtk() {
-        // Fire is weak against these types
-        return Arrays.asList(new Fire(), new Water(), new Rock(), new Dragon());
+        // Fighting is weak against these types
+        return Arrays.asList(new Poison(), new Flying(), new Psychic(), new Bug(), new Fairy());
     }
 
     public List<Element> getStrongDef() {
-        // These types are weak against Fire Pokemon
-        return Arrays.asList(new Fire(), new Grass(), new Ice(), new Bug(), new Steel(), new Fairy());
+        // These types are weak against Fighting Pokémon
+        return Arrays.asList(new Bug(), new Rock(), new Dark());
     }
 
     public List<Element> getWeakDef() {
-        // These types are strong against Fire Pokemon
-        return Arrays.asList(new Water(), new Ground(), new Rock());
+        // These types are strong against Fighting Pokémon
+        return Arrays.asList(new Flying(), new Psychic(), new Fairy());
     }
 }

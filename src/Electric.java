@@ -10,23 +10,24 @@ public class Electric implements Element {
 
     @Override
     public List<Element> getStrongAtk() {
-        // Fire is strong against these types
-        return Arrays.asList(new Grass(), new Ice(), new Bug(), new Steel());
+        // Electric is strong against these types
+        return Arrays.asList(new Water(), new Flying());
     }
 
     @Override
     public List<Element> getWeakAtk() {
-        // Fire is weak against these types
-        return Arrays.asList(new Fire(), new Water(), new Rock(), new Dragon());
+        // Electric is weak against these types
+        return Arrays.asList(new Electric(), new Grass(), new Dragon());
     }
 
     public List<Element> getStrongDef() {
-        // These types are weak against Fire Pokemon
-        return Arrays.asList(new Fire(), new Grass(), new Ice(), new Bug(), new Steel(), new Fairy());
+        // These types are weak against Electric Pokémon
+        return Arrays.asList(new Electric(), new Flying(), new Steel());
     }
 
     public List<Element> getWeakDef() {
-        // These types are strong against Fire Pokemon
-        return Arrays.asList(new Water(), new Ground(), new Rock());
+        // These types are strong against Electric Pokémon
+        return Arrays.asList(new Ground());
     }
+
 }
