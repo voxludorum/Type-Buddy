@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Map;
 
 public class TypeBuddyBuddy {
@@ -33,17 +31,38 @@ public class TypeBuddyBuddy {
 
     static ImageIcon[] loadImage() {
 
+        // Reference the images
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image normal = toolkit.getImage("PTypes/Normal.png");
+        Image fire = toolkit.getImage("PTypes/Fire.png");
+        Image water = toolkit.getImage("PTypes/Water.png");
+        Image electric = toolkit.getImage("PTypes/Electric.png");
+        Image grass = toolkit.getImage("PTypes/Grass.png");
+        Image ice = toolkit.getImage("PTypes/Ice.png");
+        Image fighting = toolkit.getImage("PTypes/Fighting.png");
+        Image poison = toolkit.getImage("PTypes/Poison.png");
+        Image ground = toolkit.getImage("PTypes/Ground.png");
+        Image flying = toolkit.getImage("PTypes/Flying.png");
+        Image psychic = toolkit.getImage("PTypes/Psychic.png");
+        Image bug = toolkit.getImage("PTypes/Bug.png");
+        Image rock = toolkit.getImage("PTypes/Rock.png");
+        Image ghost = toolkit.getImage("PTypes/Ghost.png");
+        Image dragon = toolkit.getImage("PTypes/Dragon.png");
+        Image dark = toolkit.getImage("PTypes/Dark.png");
+        Image steel = toolkit.getImage("PTypes/Steel.png");
+        Image fairy = toolkit.getImage("PTypes/Fairy.png");
+
         // Loads the images
         ImageIcon[] icons = {
-                new ImageIcon("PTypes/Normal.png", "Normal"), new ImageIcon("PTypes/Fire.png", "Fire"),
-                new ImageIcon("PTypes/Water.png", "Water"), new ImageIcon("PTypes/Electric.png", "Electric"),
-                new ImageIcon("PTypes/Grass.png", "Grass"), new ImageIcon("PTypes/Ice.png", "Ice"),
-                new ImageIcon("PTypes/Fighting.png", "Fighting"), new ImageIcon("PTypes/Poison.png", "Poison"),
-                new ImageIcon("PTypes/Ground.png", "Ground"), new ImageIcon("PTypes/Flying.png", "Flying"),
-                new ImageIcon("PTypes/Psychic.png", "Psychic"), new ImageIcon("PTypes/Bug.png", "Bug"),
-                new ImageIcon("PTypes/Rock.png", "Rock"), new ImageIcon("PTypes/Ghost.png", "Ghost"),
-                new ImageIcon("PTypes/Dragon.png", "Dragon"), new ImageIcon("PTypes/Dark.png", "Dark"),
-                new ImageIcon("PTypes/Steel.png", "Steel"), new ImageIcon("PTypes/Fairy.png", "Fairy"),
+                new ImageIcon(normal, "Normal"), new ImageIcon(fire, "Fire"),
+                new ImageIcon(water, "Water"), new ImageIcon(electric, "Electric"),
+                new ImageIcon(grass, "Grass"), new ImageIcon(ice, "Ice"),
+                new ImageIcon(fighting, "Fighting"), new ImageIcon(poison, "Poison"),
+                new ImageIcon(ground, "Ground"), new ImageIcon(flying, "Flying"),
+                new ImageIcon(psychic, "Psychic"), new ImageIcon(bug, "Bug"),
+                new ImageIcon(rock, "Rock"), new ImageIcon(ghost, "Ghost"),
+                new ImageIcon(dragon, "Dragon"), new ImageIcon(dark, "Dark"),
+                new ImageIcon(steel, "Steel"), new ImageIcon(fairy, "Fairy"),
         };
 
         return icons;
