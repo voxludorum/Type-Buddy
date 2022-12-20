@@ -102,6 +102,9 @@ public class TypeBuddy extends JFrame {
 
     static void details(Element type, JFrame frame, JButton backButton) {
 
+        // counter
+        int count;
+
         // Creates new JFrame object for the detail panel
         JFrame detailsWindow = new JFrame();
 
@@ -157,11 +160,9 @@ public class TypeBuddy extends JFrame {
 
         // Add buttons for types current type is strong against
         JPanel strongAtkButtonPanel = new JPanel(new GridBagLayout());
+        count = 0;
         for (Element t : type.getStrongAtk()) {
-            JButton button = new JButton(new ImageIcon("PTypes/" + t.getName() + ".png", t.getName()));
-            button.setSize(new Dimension(120, 24));
-            button.addActionListener(TypeBuddy.listener);
-            strongAtkButtonPanel.add(button);
+            count = makeButton(count, p, strongAtkButtonPanel, t);
         }
 
         // Add Label
@@ -170,11 +171,9 @@ public class TypeBuddy extends JFrame {
 
         // Add buttons for types current type is weak against
         JPanel weakAtkButtonPanel = new JPanel(new GridBagLayout());
+        count = 0;
         for (Element t : type.getWeakAtk()) {
-            JButton button = new JButton(new ImageIcon("PTypes/" + t.getName() + ".png", t.getName()));
-            button.setSize(new Dimension(120, 24));
-            button.addActionListener(TypeBuddy.listener);
-            weakAtkButtonPanel.add(button);
+            count = makeButton(count, p, weakAtkButtonPanel, t);
         }
 
         // Add label
@@ -183,11 +182,9 @@ public class TypeBuddy extends JFrame {
 
         // Add buttons for types current type is strong against
         JPanel strongDefButtonPanel = new JPanel(new GridBagLayout());
+        count = 0;
         for (Element t : type.getStrongDef()) {
-            JButton button = new JButton(new ImageIcon("PTypes/" + t.getName() + ".png", t.getName()));
-            button.setSize(new Dimension(120, 24));
-            button.addActionListener(TypeBuddy.listener);
-            strongDefButtonPanel.add(button);
+            count = makeButton(count, p, strongDefButtonPanel, t);
         }
 
         // Add label
@@ -196,42 +193,34 @@ public class TypeBuddy extends JFrame {
 
         // Add buttons for types current type is strong against
         JPanel weakDefButtonPanel = new JPanel(new GridBagLayout());
+        count = 0;
         for (Element t : type.getWeakDef()) {
-            JButton button = new JButton(new ImageIcon("PTypes/" + t.getName() + ".png", t.getName()));
-            button.setSize(new Dimension(120, 24));
-            button.addActionListener(TypeBuddy.listener);
-            weakDefButtonPanel.add(button);
+            count = makeButton(count, p, weakDefButtonPanel, t);
         }
 
         // Add the label/button pairs to the detailPanel
-        TypeBuddyBuddy.pBag(p,0,1,2,1);
-        TypeBuddyBuddy.buffer(p);
+        TypeBuddyBuddy.pBag(p,0, 1, 1,1,10);
         detailPanel.add(strongAtkLabel,p);
 
-        TypeBuddyBuddy.pBag(p,0,2,2,1);
-        TypeBuddyBuddy.buffer(p);
+        TypeBuddyBuddy.pBag(p,0, 2, 1,1,10);
         detailPanel.add(strongAtkButtonPanel,p);
 
-        TypeBuddyBuddy.pBag(p,0,3,2,1);
-        TypeBuddyBuddy.buffer(p);
+        TypeBuddyBuddy.pBag(p,0, 3, 1,1,10);
         detailPanel.add(weakAtkLabel,p);
 
-        TypeBuddyBuddy.pBag(p,0,4,2,1);
-        TypeBuddyBuddy.buffer(p);
+        TypeBuddyBuddy.pBag(p,0, 4, 1,1,10);
         detailPanel.add(weakAtkButtonPanel,p);
 
-        TypeBuddyBuddy.pBag(p,0,5,2,1);
-        TypeBuddyBuddy.buffer(p);
+        TypeBuddyBuddy.pBag(p,0, 5, 1,1,10);
         detailPanel.add(strongDefLabel,p);
 
-        TypeBuddyBuddy.pBag(p,0,6,2,1);
-        TypeBuddyBuddy.buffer(p);
+        TypeBuddyBuddy.pBag(p,0, 6, 1,1,10);
         detailPanel.add(strongDefButtonPanel,p);
 
-        TypeBuddyBuddy.pBag(p,0,7,2,1);
+        TypeBuddyBuddy.pBag(p,0, 7, 1,1,10);
         detailPanel.add(weakDefLabel,p);
 
-        TypeBuddyBuddy.pBag(p,0,8,2,1);
+        TypeBuddyBuddy.pBag(p,0, 8, 1,1,10);
         detailPanel.add(weakDefButtonPanel,p);
 
         // refresh the window
@@ -242,6 +231,16 @@ public class TypeBuddy extends JFrame {
         detailsWindow.setContentPane(detailPanel);
         detailsWindow.pack();
         detailsWindow.setVisible(true);
+    }
+
+    private static int makeButton(int count, GridBagConstraints p, JPanel strongAtkButtonPanel, Element t) {
+        JButton button = new JButton(new ImageIcon("PTypes/" + t.getName() + ".png", t.getName()));
+        button.setSize(new Dimension(120, 24));
+        button.addActionListener(TypeBuddy.listener);
+        TypeBuddyBuddy.pBag(p,count, 1, 1,1,10);
+        strongAtkButtonPanel.add(button,p);
+        count++;
+        return count;
     }
 
 

@@ -68,14 +68,14 @@ public class TypeBuddyBuddy {
         return icons;
     }
 
-    static GridBagConstraints pBag(GridBagConstraints c, int x, int y, int width, int height) {
+    static GridBagConstraints pBag(GridBagConstraints c, int x, int y, int width, int height, int insets) {
 
         // Sets the constraints
         c.gridx = x;
         c.gridy = y;
         c.gridwidth = width;
         c.gridheight = height;
-
+        c.insets = new Insets(insets,insets,insets,insets);
         return c;
     }
 
