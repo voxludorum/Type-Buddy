@@ -29,4 +29,14 @@ public class Bug implements Element {
         // These types are strong against Bug Pokemon
         return Arrays.asList(new Fire(), new Flying(), new Rock());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

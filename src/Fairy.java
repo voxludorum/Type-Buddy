@@ -29,4 +29,14 @@ public class Fairy implements Element {
         // These types are strong against Fairy Pokemon
         return Arrays.asList(new Poison(), new Steel());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

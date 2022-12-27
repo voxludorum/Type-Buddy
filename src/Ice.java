@@ -29,4 +29,14 @@ public class Ice implements Element {
         // These types are strong against Ice Pokémon
         return Arrays.asList(new Fire(), new Fighting(), new Rock(), new Steel());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

@@ -37,4 +37,14 @@ public class Fire implements Element { //Inherits from Element class
         // These types are strong against Fire Pokémon
         return Arrays.asList(new Water(), new Ground(), new Rock());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

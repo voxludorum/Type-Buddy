@@ -29,4 +29,14 @@ public class Dragon implements Element {
         // These types are strong against Dragon Pokemon
         return Arrays.asList(new Ice(), new Dragon(), new Fairy());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

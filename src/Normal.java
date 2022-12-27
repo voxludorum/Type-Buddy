@@ -29,4 +29,14 @@ public class Normal implements Element {
         // These types are strong against Normal Pokemon
         return Arrays.asList(new Fighting());
     }
+
+    public List<Element> getNoDamage() {
+        // Normal has no effect on these types
+        return Arrays.asList(new Ghost());
+    }
+
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
+
 }

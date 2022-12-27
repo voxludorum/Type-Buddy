@@ -29,4 +29,14 @@ public class Ghost implements Element {
         // These types are strong against Ghost Pokemon
         return Arrays.asList(new Ghost(), new Dark());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

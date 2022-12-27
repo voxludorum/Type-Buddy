@@ -29,4 +29,14 @@ public class Ground implements Element {
         // These types are strong against Ground Pokemon
         return Arrays.asList(new Water(), new Grass(), new Ice());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

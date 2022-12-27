@@ -29,4 +29,14 @@ public class Poison implements Element {
         // These types are strong against Poison Pokémon
         return Arrays.asList(new Ground(), new Psychic());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

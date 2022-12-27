@@ -51,6 +51,7 @@ public class TypeBuddyBuddy {
         Image dark = toolkit.getImage("PTypes/Dark.png");
         Image steel = toolkit.getImage("PTypes/Steel.png");
         Image fairy = toolkit.getImage("PTypes/Fairy.png");
+        Image bg = toolkit.getImage("Backgrounds/TypeBuddyBG.jpg");
 
         // Loads the images
         ImageIcon[] icons = {

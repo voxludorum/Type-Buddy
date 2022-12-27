@@ -7,6 +7,8 @@ public interface Element {
     List<Element> getWeakAtk(); // "... Moves are not very efficient against: "
     List<Element> getStrongDef(); // "These types are not very effective against ... Pokémon: "
     List<Element> getWeakDef(); // "These types are super-effective against ... Pokémon: "
+    List<Element> getNoDamage(); // "... Moves have no effect on: "
+    List<Element> getImmune(); // "These types have no effect on ... Pokémon: "
 
     // TODO: 12/18/2022
     // Add two new method calls:

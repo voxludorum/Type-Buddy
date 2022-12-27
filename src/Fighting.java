@@ -29,4 +29,14 @@ public class Fighting implements Element {
         // These types are strong against Fighting Pokémon
         return Arrays.asList(new Flying(), new Psychic(), new Fairy());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

@@ -29,4 +29,14 @@ public class Rock implements Element {
         // These types are strong against Rock Pokemon
         return Arrays.asList(new Water(), new Grass(), new Fighting(), new Ground(), new Steel());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

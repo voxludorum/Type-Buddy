@@ -29,4 +29,14 @@ public class Flying implements Element {
         // These types are strong against Flying Pokemon
         return Arrays.asList(new Electric(), new Ice(), new Rock());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

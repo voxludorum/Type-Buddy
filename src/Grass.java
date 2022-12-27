@@ -29,4 +29,14 @@ public class Grass implements Element {
         // These types are strong against Grass Pokémon
         return Arrays.asList(new Fire(), new Ice(), new Poison(), new Flying(), new Bug());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

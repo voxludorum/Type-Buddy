@@ -29,4 +29,14 @@ public class Water implements Element {
         // These types are strong against Water Pokémon
         return Arrays.asList(new Electric(), new Grass());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }

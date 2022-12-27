@@ -29,4 +29,14 @@ public class Steel implements Element {
         // These types are strong against Steel Pokemon
         return Arrays.asList(new Fire(), new Fighting(), new Ground());
     }
+
+    @Override
+    public List<Element> getNoDamage() {
+        return Arrays.asList();
+    }
+
+    @Override
+    public List<Element> getImmune() {
+        return Arrays.asList();
+    }
 }
